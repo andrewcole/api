@@ -28,7 +28,7 @@ jobs:
         pip install -r requirements.txt
     - name: Build 🏗️
       run: |
-        python ./build.py --input ./data.json --output api
+        python ./build.py --input ./data.json --output api/v1
     - name: Upload 🚀
       uses: actions/upload-pages-artifact@v3
       with:
