@@ -2,6 +2,20 @@
     "airlines": [
         {
             "active": false,
+            "callsign": "BORA JET",
+            "country": "Turkey",
+            "iata": "YB",
+            "icao": "BRJ",
+            "name": "Borajet",
+            "founded": "2008",
+            "ceased": "2017-04-24",
+            "links": {
+                "website": "http://www.borajet.com.tr/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Borajet"
+            }
+        },
+        {
+            "active": false,
             "alias": "fly 1-2-go",
             "country": "Thailand",
             "iata": "OG",
