@@ -4,52 +4,47 @@ import click
 
 import orjson
 
-@click.group()
-def main():
-    pass
 
-@click.argument("index", type=str)
-@click.argument("type", type=str)
-@click.argument("input", type=click.File(mode='r'))
-@main.command()
-def targets(
-    index,
-    type,
+@click.option(
+    "--input",
+    type=click.File(
+        mode="rb",
+    ),
+    required=True,
+)
+@click.option(
+    "--output",
+    type=click.Path(
+        dir_okay=True,
+        path_type=pathlib.Path,
+    ),
+    required=True,
+)
+@click.command()
+def main(
     input,
+    output,
 ):
     data = orjson.loads(input.read())
 
-    if type not in data:
-        raise ValueError(f"{type} not found in data")
+    for type in data:
+        click.echo(f"Generating {type}...")
+        if "indexes" not in data[type]:
+            raise ValueError(f"indexes not found in {type}")
+        if "objects" not in data[type]:
+            raise ValueError(f"objects not found in {type}")
 
-    seen = {}
-    for obj in {obj[index].lower() for obj in data[type] if index in obj}:
-        if obj in seen:
-            raise ValueError(f"Duplicate {index} found: {obj} in {type}")
-        print(obj)
+        for index in data[type]["indexes"]:
+            click.echo(f" - Generating {index}...")
 
+            for obj in [obj for obj in data[type]["objects"] if index in obj]:
+                (output / type / index / obj[index].lower()).mkdir(parents=True, exist_ok=True)
+                with open(output / type / index / obj[index].lower() / "index.json", "wb") as f:
+                    f.write(orjson.dumps(obj, option=orjson.OPT_SORT_KEYS))
+                click.echo(
+                    f"   - Generated {output / type / index / obj[index].lower() / 'index.json'}"
+                )
 
-@click.argument("index", type=str)
-@click.argument("type", type=str)
-@click.argument("input", type=click.File(mode='r'))
-@click.option("--output", type=click.Path(dir_okay=True, path_type=pathlib.Path), required=False, default=pathlib.Path("."))
-@main.command()
-def generate(
-    index,
-    type,
-    input,
-    output
-):
-    data = orjson.loads(input.read())
-
-    if type not in data:
-        raise ValueError(f"{type} not found in data")
-
-    for obj in [obj for obj in data[type] if index in obj]:
-        (output / type / index / obj[index].lower()).mkdir(parents=True, exist_ok=True)
-        with open(output / type / index / obj[index].lower() / "index.json", "wb") as f:
-            f.write(orjson.dumps(obj, option=orjson.OPT_SORT_KEYS))
-        click.echo(f"Generated {output / type / index / obj[index].lower() / 'index.json'}")
 
 if __name__ == "__main__":
     main()
