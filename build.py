@@ -48,7 +48,7 @@ def generate(
     for obj in [obj for obj in data[type] if index in obj]:
         (output / type / index / obj[index].lower()).mkdir(parents=True, exist_ok=True)
         with open(output / type / index / obj[index].lower() / "index.json", "wb") as f:
-            f.write(orjson.dumps(obj, option=orjson.OPT_INDENT_2|orjson.OPT_SORT_KEYS))
+            f.write(orjson.dumps(obj, option=orjson.OPT_SORT_KEYS))
         click.echo(f"Generated {output / type / index / obj[index].lower() / 'index.json'}")
 
 if __name__ == "__main__":
