@@ -3,16 +3,16 @@
         {
             "active": false,
             "callsign": "BORA JET",
+            "ceased": "2017-04-24",
             "country": "Turkey",
+            "founded": "2008",
             "iata": "YB",
             "icao": "BRJ",
-            "name": "Borajet",
-            "founded": "2008",
-            "ceased": "2017-04-24",
             "links": {
                 "website": "http://www.borajet.com.tr/",
                 "wikipedia": "https://en.wikipedia.org/wiki/Borajet"
-            }
+            },
+            "name": "Borajet"
         },
         {
             "active": false,
