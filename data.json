@@ -12946,7 +12946,7 @@
             {
                 "active": true,
                 "callsign": "CATHAY",
-                "country": "Hong Kong SAR of China",
+                "country": "Hong Kong",
                 "iata": "CX",
                 "icao": "CPA",
                 "name": "Cathay Pacific"
@@ -20282,7 +20282,7 @@
             {
                 "active": false,
                 "callsign": "HONGKONG GOVERNMENT",
-                "country": "Hong Kong SAR of China",
+                "country": "Hong Kong",
                 "icao": "HKG",
                 "name": "Government Flying Service"
             },
@@ -21679,7 +21679,7 @@
             {
                 "active": true,
                 "callsign": "BAUHINIA",
-                "country": "Hong Kong SAR of China",
+                "country": "Hong Kong",
                 "iata": "HX",
                 "icao": "CRK",
                 "name": "Hong Kong Airlines"
@@ -21687,7 +21687,7 @@
             {
                 "active": true,
                 "callsign": "HONGKONG SHUTTLE",
-                "country": "Hong Kong SAR of China",
+                "country": "Hong Kong",
                 "iata": "UO",
                 "icao": "HKE",
                 "name": "Hong Kong Express Airways"
@@ -27256,7 +27256,7 @@
             {
                 "active": false,
                 "callsign": "METROJET",
-                "country": "Hong Kong SAR of China",
+                "country": "Hong Kong",
                 "icao": "MTJ",
                 "name": "Metrojet"
             },
