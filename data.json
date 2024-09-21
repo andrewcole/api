@@ -23463,7 +23463,8 @@
                 "country": "AU",
                 "iata": "JQ",
                 "icao": "JST",
-                "name": "Jetstar Airways"
+                "name": "Jetstar Airways",
+                "logo": "https://en.wikipedia.org/wiki/Jetstar#/media/File:Jetstar_logo.svg"
             },
             {
                 "active": true,
@@ -31573,7 +31574,8 @@
                 "country": "AU",
                 "iata": "QF",
                 "icao": "QFA",
-                "name": "Qantas"
+                "name": "Qantas",
+                "logo": "https://en.wikipedia.org/wiki/Qantas#/media/File:Qantas_Airways_logo_2016.svg"
             },
             {
                 "active": true,
@@ -32242,7 +32244,8 @@
                 "country": "AU",
                 "iata": "ZL",
                 "icao": "RXA",
-                "name": "Regional Express"
+                "name": "Regional Express",
+                "logo": "https://en.wikipedia.org/wiki/Rex_Airlines#/media/File:Rex_Airlines_logo.svg"
             },
             {
                 "active": false,
@@ -41499,7 +41502,8 @@
                 "country": "AU",
                 "iata": "VA",
                 "icao": "VOZ",
-                "name": "Virgin Australia"
+                "name": "Virgin Australia",
+                "logo": "https://en.wikipedia.org/wiki/Virgin_Australia#/media/File:Virgin_Australia_Logo_2022.svg"
             },
             {
                 "active": false,
