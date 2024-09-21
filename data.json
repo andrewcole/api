@@ -23464,7 +23464,7 @@
                 "iata": "JQ",
                 "icao": "JST",
                 "name": "Jetstar Airways",
-                "logo": "https://en.wikipedia.org/wiki/Jetstar#/media/File:Jetstar_logo.svg"
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Jetstar_logo.svg"
             },
             {
                 "active": true,
@@ -31575,7 +31575,7 @@
                 "iata": "QF",
                 "icao": "QFA",
                 "name": "Qantas",
-                "logo": "https://en.wikipedia.org/wiki/Qantas#/media/File:Qantas_Airways_logo_2016.svg"
+                "logo": "https://upload.wikimedia.org/wikipedia/en/0/02/Qantas_Airways_logo_2016.svg"
             },
             {
                 "active": true,
@@ -41503,7 +41503,7 @@
                 "iata": "VA",
                 "icao": "VOZ",
                 "name": "Virgin Australia",
-                "logo": "https://en.wikipedia.org/wiki/Virgin_Australia#/media/File:Virgin_Australia_Logo_2022.svg"
+                "logo": "https://upload.wikimedia.org/wikipedia/en/0/06/Virgin_Australia_Logo_2022.svg"
             },
             {
                 "active": false,
