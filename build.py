@@ -44,6 +44,14 @@ def main(
                 click.echo(
                     f"   - Generated {output / type / index / obj[index].lower() / 'index.json'}"
                 )
+            
+            (output / type / index).mkdir(parents=True, exist_ok=True)
+            with open(output / type / index / "index.json", "wb") as f:
+                f.write(orjson.dumps({obj[index]: f"{type}/{index}/{obj[index].lower()}" for obj in data[type]["objects"] if index in obj}, option=orjson.OPT_SORT_KEYS))
+            click.echo(
+                f"   - Generated {output / type / index / 'index.json'}"
+            )
+            
 
 
 if __name__ == "__main__":
